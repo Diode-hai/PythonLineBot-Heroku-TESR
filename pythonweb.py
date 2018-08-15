@@ -18,9 +18,9 @@ import urllib3
 app = Flask(__name__)
 
 #Token
-line_bot_api = LineBotApi('uPPbuNIIATryuuhKwEC4kRRHqdNd4+73PnMi+7DQ383G4NMkI6S7a+li5SCoqZJGbKsl3sxQ6J556VApXNkprhB4dKVg1rR6UcHZzSTFyte5h0qyqFAb9zISLsL5LEw+DS/KlnXV/IG5UDYV3g6qjQdB04t89/1O/w1cDnyilFU=')
+line_bot_api = LineBotApi('ItfoFj89IMTUAR2ERKN1yPxAPZk4UvEC4fperPkGrCg/L6GwTXKR/sOC1KEYyMJppqHG9UdSDvkWNLEWHcC5E5SfptTgPKsgcMgQzFj9nDNTaJlDhv/Xw+0ahLBCWC8nO8sMe6GSGd+dP6fmoFMPNwdB04t89/1O/w1cDnyilFU=')
 #Channel secret
-handler = WebhookHandler('bce117e84ff9f7e593d428b1ffac7aa4')
+handler = WebhookHandler('85e93a3b16a648dafd2da84f1a9f9f3e')
 
 APPID="BotChatLine"
 KEY = "me37I8KsiCqpTWS"
