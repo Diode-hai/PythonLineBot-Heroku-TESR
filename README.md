@@ -1,2 +1,2 @@
-# PythonLineBot-Heroku-TESR
-test
+# LineBot
+LineBot On Raspberry Pi IoT by TESR
