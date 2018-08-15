@@ -70,10 +70,10 @@ def handle_message(event):
 	
     elif "menu" in str(event.message.text):
     	line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Menu'))
-	image_message = ImageSendMessage(
-    	original_content_url='https://previews.123rf.com/images/seamartini/seamartini1708/seamartini170800547/84922979-japanese-cuisine-restaurant-menu-template-vector-lunch-offer-for-sweet-syrup-tangerine-tory-kenko-ya.jpg',
-    	preview_image_url='https://previews.123rf.com/images/seamartini/seamartini1708/seamartini170800547/84922979-japanese-cuisine-restaurant-menu-template-vector-lunch-offer-for-sweet-syrup-tangerine-tory-kenko-ya.jpg'
-    	)
+	#image_message = ImageSendMessage(
+    	#original_content_url='https://previews.123rf.com/images/seamartini/seamartini1708/seamartini170800547/84922979-japanese-cuisine-restaurant-menu-template-vector-lunch-offer-for-sweet-syrup-tangerine-tory-kenko-ya.jpg',
+    	#preview_image_url='https://previews.123rf.com/images/seamartini/seamartini1708/seamartini170800547/84922979-japanese-cuisine-restaurant-menu-template-vector-lunch-offer-for-sweet-syrup-tangerine-tory-kenko-ya.jpg'
+    	#)
 
     	#--REST API NETPIE OFF LED--
     	#r = requests.put(url, data = {'':'OFF'} , auth=(str(KEY),str(SECRET)))
