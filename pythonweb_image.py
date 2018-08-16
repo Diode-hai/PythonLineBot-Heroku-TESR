@@ -10,7 +10,7 @@ from linebot.exceptions import (
     InvalidSignatureError
 )
 from linebot.models import (
-    MessageEvent, TextMessage, TextSendMessage, ImageSendMessage,get_profile
+    MessageEvent, TextMessage, TextSendMessage, ImageSendMessage
 )
 
 app = Flask(__name__)
@@ -60,8 +60,7 @@ def handle_message(event):
 
     if "menu" in str(event.message.text):
         #line_bot_api.reply_message(event.reply_token,TextSendMessage(text='On Menu'))
-        #line_bot_api.reply_message(event.reply_token,image_menu)
-	line_bot_api.get_profile('<diode.id>')
+        line_bot_api.reply_message(event.reply_token,image_menu)
 
         #REST API NETPIE OFF LED
     	#r = requests.put(url, data = {'':'MENU'} , auth=(str(KEY),str(SECRET)))
