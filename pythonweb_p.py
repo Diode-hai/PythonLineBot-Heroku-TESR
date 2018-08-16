@@ -40,7 +40,7 @@ urlRESTAPI = 'https://api.netpie.io/topic/' + str(APPID) + str(Topic) + '?auth='
     
 #----------------------------------------------------
 #@app.route("/callback", methods= ['GET','POST','DELETE'])
-@app.route("/callback", methods= ['POST'])
+@app.route("/callback_TESR", methods= ['POST'])
 def callback():
     signature = request.headers['X-Line-Signature']
 
@@ -58,7 +58,7 @@ def callback():
 def handle_message(event):
 	#global url , KEY , SECRET
     if "on" in str(event.message.text):
-    	line_bot_api.reply_message(event.reply_token,TextSendMessage(text='ON LED'))
+    	line_bot_api.reply_message(event.reply_token,TextSendMessage(text='ON LED1'))
 
     	#REST API NETPIE ON LED
     	r = requests.put(url, data = {'':'ON'} , auth=(str(KEY),str(SECRET)))
