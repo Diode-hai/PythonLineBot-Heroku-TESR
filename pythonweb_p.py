@@ -31,7 +31,7 @@ url = 'https://api.netpie.io/topic/' + str(APPID) + str(Topic)
 urlRESTAPI = 'https://api.netpie.io/topic/' + str(APPID) + str(Topic) + '?auth=' + str(KEY) + ':' + str(SECRET)
 #https://api.netpie.io/topic/LineBotRpi/LED_Control?auth=Jk0ej35pLC7TVr1:edWzwTUkzizhlyRamWWq6nF9I
 
-message = ImageSendMessage(original_content_url='https://www.img.in.th/images/04a428c1264fde336fb867412d648f40.jpg',preview_image_url='https://www.img.in.th/images/04a428c1264fde336fb867412d648f40.jpg')
+message = ImageSendMessage(original_content_url='https://image.ibb.co/fx6ibU/hotpotgalaxy240.jpg',preview_image_url='https://image.ibb.co/fx6ibU/hotpotgalaxy240.jpg')
 #---------------------------------------------------
 #@app.route("/")
 #@app.route("/callback")
