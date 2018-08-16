@@ -58,7 +58,7 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
 
-    if "menu_p" in str(event.message.text):
+    if "menu" in str(event.message.text):
         #line_bot_api.reply_message(event.reply_token,TextSendMessage(text='On Menu'))
         line_bot_api.reply_message(event.reply_token,image_menu)
 
