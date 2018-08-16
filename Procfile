@@ -1,1 +1,1 @@
-web: gunicorn pythonweb2:app --log-file=-
+web: gunicorn pythonweb_p:app --log-file=-
