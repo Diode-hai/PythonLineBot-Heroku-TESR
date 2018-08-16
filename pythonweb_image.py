@@ -65,20 +65,20 @@ def handle_message(event):
         #REST API NETPIE OFF LED
     	#r = requests.put(url, data = {'':'MENU'} , auth=(str(KEY),str(SECRET)))
 
-    if "on_p" in str(event.message.text):
+    elif "on_p" in str(event.message.text):
     	line_bot_api.reply_message(event.reply_token,TextSendMessage(text='ON LED2'))
 
     	#REST API NETPIE ON LED
     	r = requests.put(url, data = {'':'ON'} , auth=(str(KEY),str(SECRET)))
 		
-    if "off_p" in str(event.message.text):
+    elif "off_p" in str(event.message.text):
     	line_bot_api.reply_message(event.reply_token,TextSendMessage(text='ON LED2'))
 	
     	#REST API NETPIE OFF LED
     	r = requests.put(url, data = {'':'OFF'} , auth=(str(KEY),str(SECRET)))
 
 
-    if "temp?_p" in str(event.message.text):
+    elif "temp?_p" in str(event.message.text):
     	#REST API NETPIE read sensor value
     	r = requests.put(url, data = {'':'temp?'} , auth=(str(KEY),str(SECRET)))
     	
