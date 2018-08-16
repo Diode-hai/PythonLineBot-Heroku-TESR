@@ -79,8 +79,8 @@ def handle_message(event):
         
         #r = requests.get(urlRESTAPI)
         #https://api.netpie.io/topic/LineBotRpi/LED_Control?auth=Jk0ej35pLC7TVr1:edWzwTUkzizhlyRamWWq6nF9I
-        
-    else:
+
+      else:
     	line_bot_api.reply_message(event.reply_token,TextSendMessage(text=event.message.text))
 
 #------------------------------------------------
