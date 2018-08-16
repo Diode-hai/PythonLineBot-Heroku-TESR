@@ -70,7 +70,7 @@ def handle_message(event):
 	
 	#line_bot_api.sendPhoto(chat_id="1600881912", photo="https://telegram.org/img/t_logo.png", caption="Sample photo")
 	#try:
-	line_bot_api.reply_message(event.reply_token, message)
+	line_bot_api.reply_message(event.reply_token, TextSendMessage(message))
 	#except InvalidSignatureError:
 		#abort(400)
 
