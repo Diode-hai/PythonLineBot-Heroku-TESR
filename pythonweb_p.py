@@ -67,7 +67,7 @@ def handle_message(event):
     	#line_bot_api.reply_message(event.reply_token,TextSendMessage(text='OFF LED1'))
 	#message = ImageSendMessage(original_content_url='https://www.img.in.th/images/04a428c1264fde336fb867412d648f40.jpg',preview_image_url='https://www.img.in.th/images/04a428c1264fde336fb867412d648f40.jpg')
 	
-	line_bot_api.sendPhoto(chat_id="Ue0767b552bdffaa64add71ce93b016c5", photo="https://telegram.org/img/t_logo.png", caption="Sample photo")
+	line_bot_api.sendPhoto(chat_id="1600881912", photo="https://telegram.org/img/t_logo.png", caption="Sample photo")
 	#try:
 	#line_bot_api.reply_message(event.reply_token, message)
 	#except InvalidSignatureError:
