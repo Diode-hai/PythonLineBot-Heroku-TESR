@@ -68,16 +68,16 @@ def handle_message(event):
     	#REST API NETPIE OFF LED
     	r = requests.put(url, data = {'':'OFF'} , auth=(str(KEY),str(SECRET)))
 	
-    if "menu" in str(event.message.text):
+    #if "menu" in str(event.message.text):
     	#line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Menu'))
 
-	image_message = ImageSendMessage(
-		original_content_url='https://www.picz.in.th/images/2018/08/16/BHYO9V.jpg',
-		preview_image_url='https://www.picz.in.th/images/2018/08/16/BHYO9V.jpg'
-	)
+	#image_message = ImageSendMessage(
+	#	original_content_url='https://www.picz.in.th/images/2018/08/16/BHYO9V.jpg',
+	#	preview_image_url='https://www.picz.in.th/images/2018/08/16/BHYO9V.jpg'
+	#)
 	#line_bot_api.push_message('ItfoFj89IMTUAR2ERKN1yPxAPZk4UvEC4fperPkGrCg/L6GwTXKR/sOC1KEYyMJppqHG9UdSDvkWNLEWHcC5E5SfptTgPKsgcMgQzFj9nDNTaJlDhv/Xw+0ahLBCWC8nO8sMe6GSGd+dP6fmoFMPNwdB04t89/1O/w1cDnyilFU=', image_message)
 
-	line_bot_api.reply_message(event.reply_token,image_message)
+	#line_bot_api.reply_message(event.reply_token,image_message)
 
 	
     	#--REST API NETPIE OFF LED--
