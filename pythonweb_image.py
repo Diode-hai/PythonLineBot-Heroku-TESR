@@ -58,8 +58,8 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
 
-    #if "Mymenu" in str(event.message.text):
-        #line_bot_api.reply_message(event.reply_token,TextSendMessage(text='On Menu'))
+    if "menu_p" in str(event.message.text):
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='On Menu'))
         #line_bot_api.reply_message(event.reply_token,image_menu)
 
         #REST API NETPIE OFF LED
