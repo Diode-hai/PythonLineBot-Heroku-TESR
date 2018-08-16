@@ -32,7 +32,7 @@ urlRESTAPI = 'https://api.netpie.io/topic/' + str(APPID) + str(Topic) + '?auth='
 #https://api.netpie.io/topic/LineBotRpi/LED_Control?auth=Jk0ej35pLC7TVr1:edWzwTUkzizhlyRamWWq6nF9I
 
 #message = ImageSendMessage(original_content_url='https://image.ibb.co/fx6ibU/hotpotgalaxy240.jpg',preview_image_url='https://image.ibb.co/fx6ibU/hotpotgalaxy240.jpg')
-#message = ImageSendMessage(original_content_url='https://telegram.org/img/t_logo.png',preview_image_url='https://telegram.org/img/t_logo.png')
+message = ImageSendMessage(original_content_url='https://telegram.org/img/t_logo.png',preview_image_url='https://telegram.org/img/t_logo.png')
 #---------------------------------------------------
 #@app.route("/")
 #@app.route("/callback")
@@ -70,7 +70,7 @@ def handle_message(event):
 	
 	#line_bot_api.sendPhoto(chat_id="1600881912", photo="https://telegram.org/img/t_logo.png", caption="Sample photo")
 	#try:
-	line_bot_api.reply_message(event.reply_token, TextSendMessage("message"))
+	line_bot_api.reply_message(event.reply_token, TextSendMessage(text= 'message'))
 	#except InvalidSignatureError:
 		#abort(400)
 
