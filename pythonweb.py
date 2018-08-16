@@ -70,7 +70,7 @@ def handle_message(event):
     elif "menu" in str(event.message.text):
     	line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Menu'))
 
-	#image_message  = ImageSendMessage(original_content_url='https://www.picz.in.th/images/2018/08/16/BHk2VV.jpg',preview_image_url='https://www.picz.in.th/images/2018/08/16/BHk2VV.jpg')
+	image_message = ImageSendMessage(original_content_url='https://www.picz.in.th/images/2018/08/16/BHk2VV.jpg',preview_image_url='https://www.picz.in.th/images/2018/08/16/BHk2VV.jpg')
 	#line_bot_api.push_message('ItfoFj89IMTUAR2ERKN1yPxAPZk4UvEC4fperPkGrCg/L6GwTXKR/sOC1KEYyMJppqHG9UdSDvkWNLEWHcC5E5SfptTgPKsgcMgQzFj9nDNTaJlDhv/Xw+0ahLBCWC8nO8sMe6GSGd+dP6fmoFMPNwdB04t89/1O/w1cDnyilFU=', image_message)
 	#line_bot_api.reply_message(event.reply_token,TextSendMessage(text='https://www.picz.in.th/images/2018/08/16/BHYO9V.jpg'))
 	#line_bot_api.reply_message(event.reply_token, image_message )
