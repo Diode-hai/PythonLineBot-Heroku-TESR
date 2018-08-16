@@ -58,27 +58,27 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
 
-    if "Mymenu" in str(event.message.text):
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='On Menu'))
+    #if "Mymenu" in str(event.message.text):
+        #line_bot_api.reply_message(event.reply_token,TextSendMessage(text='On Menu'))
         #line_bot_api.reply_message(event.reply_token,image_menu)
 
         #REST API NETPIE OFF LED
-    	r = requests.put(url, data = {'':'MENU'} , auth=(str(KEY),str(SECRET)))
+    	#r = requests.put(url, data = {'':'MENU'} , auth=(str(KEY),str(SECRET)))
 
-    elif "on" in str(event.message.text):
+    if "on_p" in str(event.message.text):
     	line_bot_api.reply_message(event.reply_token,TextSendMessage(text='ON LED2'))
 
     	#REST API NETPIE ON LED
     	r = requests.put(url, data = {'':'ON'} , auth=(str(KEY),str(SECRET)))
 		
-    elif "off" in str(event.message.text):
+    if "off_p" in str(event.message.text):
     	line_bot_api.reply_message(event.reply_token,TextSendMessage(text='ON LED2'))
 	
     	#REST API NETPIE OFF LED
     	r = requests.put(url, data = {'':'OFF'} , auth=(str(KEY),str(SECRET)))
 
 
-    elif "temp?" in str(event.message.text):
+    if "temp?_p" in str(event.message.text):
     	#REST API NETPIE read sensor value
     	r = requests.put(url, data = {'':'temp?'} , auth=(str(KEY),str(SECRET)))
     	
