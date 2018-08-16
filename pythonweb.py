@@ -74,9 +74,15 @@ def handle_message(event):
 	#line_bot_api.push_message('ItfoFj89IMTUAR2ERKN1yPxAPZk4UvEC4fperPkGrCg/L6GwTXKR/sOC1KEYyMJppqHG9UdSDvkWNLEWHcC5E5SfptTgPKsgcMgQzFj9nDNTaJlDhv/Xw+0ahLBCWC8nO8sMe6GSGd+dP6fmoFMPNwdB04t89/1O/w1cDnyilFU=', image_message)
 	#line_bot_api.reply_message(event.reply_token,TextSendMessage(text='https://www.picz.in.th/images/2018/08/16/BHYO9V.jpg'))
 	#line_bot_api.reply_message(event.reply_token, image_message )
+	location_message = LocationSendMessage(
+    		title='my location',
+    		address='Tokyo',
+    		latitude=35.65910807942215,
+    		longitude=139.70372892916203
+	)
 	
-	sticker_message = StickerSendMessage(package_id='1',sticker_id='1')
-	line_bot_api.reply_message(event.reply_token, sticker_message )
+	#sticker_message = StickerSendMessage(package_id='1',sticker_id='1')
+	line_bot_api.reply_message(event.reply_token, location_message )
 
     	#--REST API NETPIE OFF LED--
     	r = requests.put(url, data = {'':'Menu'} , auth=(str(KEY),str(SECRET)))
