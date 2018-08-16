@@ -10,13 +10,14 @@ from linebot.exceptions import (
     InvalidSignatureError
 )
 from linebot.models import (
-    MessageEvent, TextMessage, TextSendMessage,
+    MessageEvent, TextMessage, TextSendMessage, ImageSendMessage
 )
 
 app = Flask(__name__)
 
 #Token
-line_bot_api = LineBotApi('tgBlH/o6bTRXjdKuLC3QQ/42RefujzBGP/JPwagMHdpoh0+qQBcIoIJH+PvmRZmepqHG9UdSDvkWNLEWHcC5E5SfptTgPKsgcMgQzFj9nDOE5tT/ULtObrhqhc9WMe/HqeWN7GqzwfBfOhftArE0kgdB04t89/1O/w1cDnyilFU=
+line_bot_api = LineBotApi('tgBlH/o6bTRXjdKuLC3QQ/42RefujzBGP/JPwagMHdpoh0+qQBcIoIJH+PvmRZmepqHG9UdSDvkWNLEWHcC5E5SfptTgPKsgcMgQzFj9nDOE5tT/ULtObrhqhc9WMe/HqeWN7GqzwfBfOhftArE0kgdB04t89/1O/w1cDnyilFU=')
+#Channel secret
 handler = WebhookHandler('85e93a3b16a648dafd2da84f1a9f9f3e')
 
 APPID="BotChatLine"
@@ -39,11 +40,12 @@ urlRESTAPI = 'https://api.netpie.io/topic/' + str(APPID) + str(Topic) + '?auth='
     
 #----------------------------------------------------
 #@app.route("/callback", methods= ['GET','POST','DELETE'])
-@app.route("/callback_TESR", methods= ['POST'])
+@app.route("/callback", methods= ['POST'])
 def callback():
     signature = request.headers['X-Line-Signature']
-	body = request.get_data(as_text=True)
-	app.logger.info("Request body: " + body)
+
+    body = request.get_data(as_text=True)
+    app.logger.info("Request body: " + body)
     
     try:
         handler.handle(body, signature)
@@ -62,8 +64,9 @@ def handle_message(event):
     	r = requests.put(url, data = {'':'ON'} , auth=(str(KEY),str(SECRET)))
 		
     elif "off" in str(event.message.text):
-    	line_bot_api.reply_message(event.reply_token,TextSendMessage(text='OFF LED'))
-
+    	line_bot_api.reply_message(event.reply_token,TextSendMessage(text='OFF LED1'))
+	
+	
     	#REST API NETPIE OFF LED
     	r = requests.put(url, data = {'':'OFF'} , auth=(str(KEY),str(SECRET)))
 
@@ -78,9 +81,9 @@ def handle_message(event):
         
         #r = requests.get(urlRESTAPI)
         #https://api.netpie.io/topic/LineBotRpi/LED_Control?auth=Jk0ej35pLC7TVr1:edWzwTUkzizhlyRamWWq6nF9I
-
+        
     else:
-	line_bot_api.reply_message(event.reply_token,TextSendMessage(text=event.message.text))
+    	line_bot_api.reply_message(event.reply_token,TextSendMessage(text=event.message.text))
 
 #------------------------------------------------
  
