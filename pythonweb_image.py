@@ -59,8 +59,8 @@ def callback():
 def handle_message(event):
 
     if "menu_p" in str(event.message.text):
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='On Menu'))
-        #line_bot_api.reply_message(event.reply_token,image_menu)
+        #line_bot_api.reply_message(event.reply_token,TextSendMessage(text='On Menu'))
+        line_bot_api.reply_message(event.reply_token,image_menu)
 
         #REST API NETPIE OFF LED
     	#r = requests.put(url, data = {'':'MENU'} , auth=(str(KEY),str(SECRET)))
