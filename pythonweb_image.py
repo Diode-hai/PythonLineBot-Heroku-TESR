@@ -83,7 +83,7 @@ def handle_message(event):
         #r = requests.get(urlRESTAPI)
         #https://api.netpie.io/topic/LineBotRpi/LED_Control?auth=Jk0ej35pLC7TVr1:edWzwTUkzizhlyRamWWq6nF9I
 
-    if "m" in str(event.message.text):
+    if "FFO" in str(event.message.text):
 	line_bot_api.reply_message(event.reply_token,TextSendMessage(text='MENU'))
 	#line_bot_api.reply_message(event.reply_token,TextSendMessage(text='MENU'))
         #line_bot_api.reply_message(event.reply_token,image_menu)
