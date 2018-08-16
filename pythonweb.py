@@ -18,7 +18,7 @@ import urllib3
 app = Flask(__name__)
 
 #Token
-line_bot_api = LineBotApi('ItfoFj89IMTUAR2ERKN1yPxAPZk4UvEC4fperPkGrCg/L6GwTXKR/sOC1KEYyMJppqHG9UdSDvkWNLEWHcC5E5SfptTgPKsgcMgQzFj9nDNTaJlDhv/Xw+0ahLBCWC8nO8sMe6GSGd+dP6fmoFMPNwdB04t89/1O/w1cDnyilFU=')
+line_bot_api = LineBotApi('tgBlH/o6bTRXjdKuLC3QQ/42RefujzBGP/JPwagMHdpoh0+qQBcIoIJH+PvmRZmepqHG9UdSDvkWNLEWHcC5E5SfptTgPKsgcMgQzFj9nDOE5tT/ULtObrhqhc9WMe/HqeWN7GqzwfBfOhftArE0kgdB04t89/1O/w1cDnyilFU=')
 #Channel secret
 handler = WebhookHandler('85e93a3b16a648dafd2da84f1a9f9f3e')
 
