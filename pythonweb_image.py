@@ -83,11 +83,12 @@ def handle_message(event):
         #r = requests.get(urlRESTAPI)
         #https://api.netpie.io/topic/LineBotRpi/LED_Control?auth=Jk0ej35pLC7TVr1:edWzwTUkzizhlyRamWWq6nF9I
 
-    elif "menu" in str(event.message.text):
-        line_bot_api.reply_message(event.reply_token,image_menu)
+    #elif "menu" in str(event.message.text):
+	#line_bot_api.reply_message(event.reply_token,TextSendMessage(text='ON LED2'))
+        #line_bot_api.reply_message(event.reply_token,image_menu)
 
         #REST API NETPIE OFF LED
-    	r = requests.put(url, data = {'':'MENU'} , auth=(str(KEY),str(SECRET)))
+    	#r = requests.put(url, data = {'':'MENU'} , auth=(str(KEY),str(SECRET)))
         
     else:
     	line_bot_api.reply_message(event.reply_token,TextSendMessage(text=event.message.text))
