@@ -66,7 +66,7 @@ def handle_message(event):
 		
     elif "off" in str(event.message.text):
 	#line_bot_api.reply_message(event.reply_token, message))
-    	line_bot_api.reply_message(event.reply_token,TextSendMessage(message))
+    	line_bot_api.reply_message(event.reply_token,message)
 	#message = ImageSendMessage(original_content_url='https://www.img.in.th/images/04a428c1264fde336fb867412d648f40.jpg',preview_image_url='https://www.img.in.th/images/04a428c1264fde336fb867412d648f40.jpg')
 	
 	#line_bot_api.sendPhoto(chat_id="1600881912", photo="https://telegram.org/img/t_logo.png", caption="Sample photo")
