@@ -64,14 +64,14 @@ def handle_message(event):
     	#REST API NETPIE ON LED
     	r = requests.put(url, data = {'':'ON'} , auth=(str(KEY),str(SECRET)))
 		
-    elif "off" in str(event.message.text):
+    if "off" in str(event.message.text):
     	line_bot_api.reply_message(event.reply_token,TextSendMessage(text='ON LED2'))
 	
     	#REST API NETPIE OFF LED
     	r = requests.put(url, data = {'':'OFF'} , auth=(str(KEY),str(SECRET)))
 
 
-    elif "temp?" in str(event.message.text):
+    if "temp?" in str(event.message.text):
     	#REST API NETPIE read sensor value
     	r = requests.put(url, data = {'':'temp?'} , auth=(str(KEY),str(SECRET)))
     	
@@ -83,7 +83,7 @@ def handle_message(event):
         #r = requests.get(urlRESTAPI)
         #https://api.netpie.io/topic/LineBotRpi/LED_Control?auth=Jk0ej35pLC7TVr1:edWzwTUkzizhlyRamWWq6nF9I
 
-    elif "menu" in str(event.message.text):
+    if "menu" in str(event.message.text):
 	line_bot_api.reply_message(event.reply_token,TextSendMessage(text='MENU'))
         #line_bot_api.reply_message(event.reply_token,image_menu)
 
