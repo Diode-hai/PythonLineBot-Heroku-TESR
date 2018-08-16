@@ -70,11 +70,11 @@ def handle_message(event):
     	#REST API NETPIE OFF LED
     	r = requests.put(url, data = {'':'OFF'} , auth=(str(KEY),str(SECRET)))
 
-    elif "menu" in str(event.message.text):
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Menu pon'))
+    #elif "menu" in str(event.message.text):
+        #line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Menu pon'))
 
         #REST API NETPIE OFF LED
-    	r = requests.put(url, data = {'':'MENU'} , auth=(str(KEY),str(SECRET)))
+    	#r = requests.put(url, data = {'':'MENU'} , auth=(str(KEY),str(SECRET)))
 
     elif "temp?" in str(event.message.text):
     	#REST API NETPIE read sensor value
