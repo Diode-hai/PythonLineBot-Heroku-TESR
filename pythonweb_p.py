@@ -42,9 +42,8 @@ urlRESTAPI = 'https://api.netpie.io/topic/' + str(APPID) + str(Topic) + '?auth='
 @app.route("/callback_TESR", methods= ['POST'])
 def callback():
     signature = request.headers['X-Line-Signature']
-
-    body = request.get_data(as_text=True)
-    app.logger.info("Request body: " + body)
+	body = request.get_data(as_text=True)
+	app.logger.info("Request body: " + body)
     
     try:
         handler.handle(body, signature)
@@ -80,8 +79,8 @@ def handle_message(event):
         #r = requests.get(urlRESTAPI)
         #https://api.netpie.io/topic/LineBotRpi/LED_Control?auth=Jk0ej35pLC7TVr1:edWzwTUkzizhlyRamWWq6nF9I
 
-      else:
-    	line_bot_api.reply_message(event.reply_token,TextSendMessage(text=event.message.text))
+    else:
+	line_bot_api.reply_message(event.reply_token,TextSendMessage(text=event.message.text))
 
 #------------------------------------------------
  
@@ -89,4 +88,3 @@ if __name__ == "__main__":
     app.run()
 
 #-------------------------------------------------
-
