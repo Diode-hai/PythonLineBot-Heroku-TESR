@@ -31,7 +31,7 @@ url = 'https://api.netpie.io/topic/' + str(APPID) + str(Topic)
 urlRESTAPI = 'https://api.netpie.io/topic/' + str(APPID) + str(Topic) + '?auth=' + str(KEY) + ':' + str(SECRET)
 #https://api.netpie.io/topic/LineBotRpi/LED_Control?auth=Jk0ej35pLC7TVr1:edWzwTUkzizhlyRamWWq6nF9I
 
-
+message = ImageSendMessage(original_content_url='https://www.img.in.th/images/04a428c1264fde336fb867412d648f40.jpg',preview_image_url='https://www.img.in.th/images/04a428c1264fde336fb867412d648f40.jpg')
 #---------------------------------------------------
 #@app.route("/")
 #@app.route("/callback")
@@ -65,7 +65,7 @@ def handle_message(event):
 		
     elif "off" in str(event.message.text):
     	line_bot_api.reply_message(event.reply_token,TextSendMessage(text='OFF LED1'))
-	message = ImageSendMessage(original_content_url='https://www.img.in.th/images/04a428c1264fde336fb867412d648f40.jpg',preview_image_url='https://www.img.in.th/images/04a428c1264fde336fb867412d648f40.jpg')
+	#message = ImageSendMessage(original_content_url='https://www.img.in.th/images/04a428c1264fde336fb867412d648f40.jpg',preview_image_url='https://www.img.in.th/images/04a428c1264fde336fb867412d648f40.jpg')
 	
 	#line_bot_api.reply_message(event.reply_token, message)
 	
