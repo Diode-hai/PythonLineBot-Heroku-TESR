@@ -75,11 +75,8 @@ def handle_message(event):
 	#line_bot_api.reply_message(event.reply_token,TextSendMessage(text='https://www.picz.in.th/images/2018/08/16/BHYO9V.jpg'))
 	#line_bot_api.reply_message(event.reply_token, image_message )
 	
-	sticker_message = StickerSendMessage(
-    		package_id='1',
-    		sticker_id='1'
-	)
-	line_bot_api.reply_message(event.reply_token, sticker_message )
+	#sticker_message = StickerSendMessage(package_id='1',sticker_id='1')
+	#line_bot_api.reply_message(event.reply_token, sticker_message )
 
 	
     	#--REST API NETPIE OFF LED--
