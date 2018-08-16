@@ -58,13 +58,19 @@ def callback():
 def handle_message(event):
 	#global url , KEY , SECRET
     if "on" in str(event.message.text):
-    	line_bot_api.reply_message(event.reply_token,TextSendMessage(text='ON LED1'))
+    	line_bot_api.reply_message(event.reply_token,TextSendMessage(text='ON LED2'))
 
     	#REST API NETPIE ON LED
     	r = requests.put(url, data = {'':'ON'} , auth=(str(KEY),str(SECRET)))
 		
     elif "off" in str(event.message.text):
-    	line_bot_api.reply_message(event.reply_token,TextSendMessage(text='OFF LED1'))
+    	#line_bot_api.reply_message(event.reply_token,TextSendMessage(text='OFF LED1'))
+	message = ImageSendMessage(
+    		original_content_url='https://www.img.in.th/images/04a428c1264fde336fb867412d648f40.jpg',
+    		preview_image_url='https://www.img.in.th/images/04a428c1264fde336fb867412d648f40.jpg'
+	)
+	
+	line_bot_api.reply_message(event.reply_token, message)
 	
 	
     	#REST API NETPIE OFF LED
