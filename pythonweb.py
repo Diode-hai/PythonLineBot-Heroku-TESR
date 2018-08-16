@@ -54,7 +54,7 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-	text = event.message.text
+	#text = event.message.text
 	#global url , KEY , SECRET
 	if "on" in str(event.message.text):
     		line_bot_api.reply_message(event.reply_token,TextSendMessage(text='ON LED'))
