@@ -109,7 +109,7 @@ def handle_text_message(event):
                 MessageAction(label='Menu', text='menu'),
                 URIAction(label='Help', uri='http://line.me/ti/p/~diode.pon'),
                 URIAction(label='Help', uri='https://scontent.fbkk10-1.fna.fbcdn.net/v/t1.0-9/25348376_10209405901979171_4715413657210557947_n.jpg?_nc_cat=0&oh=782afc517da25d80cf014aedf1a59b9b&oe=5C0DDB85'),
-                MessageAction(label='Contact', message)
+                #MessageAction(label='Contact', message)
             ])
         template_message = TemplateSendMessage(
             alt_text='Buttons alt text', template=buttons_template)
