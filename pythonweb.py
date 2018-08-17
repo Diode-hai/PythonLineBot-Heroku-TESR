@@ -86,9 +86,7 @@ def handle_text_message(event):
             MessageAction(label='Yes', text='Yes!'),
             MessageAction(label='No', text='No!'),
         ])
-        template_message = TemplateSendMessage(
-            alt_text='Confirm alt text', template=confirm_template)
-        line_bot_api.reply_message(event.reply_token, template_message)
+        template_message = TemplateSendMessage(alt_text='Confirm alt text', template=confirm_template)
 		if text == 'Yes!':
 			line_bot_api.reply_message(event.reply_token, text='ขอบคุณสำหรับเมนู ทางร้านจะแจ้งเวลารับอาหารอีกครั้ง')
 		elif:
