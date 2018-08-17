@@ -29,7 +29,7 @@ line_bot_api = LineBotApi('tgBlH/o6bTRXjdKuLC3QQ/42RefujzBGP/JPwagMHdpoh0+qQBcIo
 #Channel secret
 handler = WebhookHandler('85e93a3b16a648dafd2da84f1a9f9f3e')
 
-@app.route("/callback", methods=['POST'])
+@app.route("/callback_TESR", methods=['POST'])
 def callback():
     # get X-Line-Signature header value
     signature = request.headers['X-Line-Signature']
