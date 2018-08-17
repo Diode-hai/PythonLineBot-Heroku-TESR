@@ -96,7 +96,7 @@ def handle_text_message(event):
         if isinstance(event.source, SourceUser):
             profile = line_bot_api.get_profile(event.source.user_id)
         buttons_template = ButtonsTemplate(
-            title='สวัสดีค่ะ คุณ' + profile.display_name, text='ยินดีตอนรับเข้าสู่ร้านอาหารเวทมนต์"TESR"กรุณากดเลือกเมนูด้านล่างนะคะ', actions=[
+            title='สวัสดีค่ะ คุณ' + profile.display_name, text='ยินดีตอนรับเข้าสู่ร้านอาหารเวทมนต์ "TESR" กรุณากดเลือกเมนูด้านล่างนะ', actions=[
                 #URIAction(label='Go to line.me', uri='https://line.me'),
                 #PostbackAction(label='ping', data='ping'),
                 #PostbackAction(label='ping with text', data='ping', text='ping'),
