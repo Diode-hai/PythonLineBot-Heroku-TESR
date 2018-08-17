@@ -83,7 +83,7 @@ def handle_text_message(event):
                 event.reply_token,
                 TextSendMessage(text="Bot can't leave from 1:1 chat"))
     elif text == 'confirm':
-        confirm_template = ConfirmTemplate(text='Do it?', actions=[
+        confirm_template = ConfirmTemplate(text= event.message.text + 'Are you sure about the menu?', actions=[
             MessageAction(label='Yes', text='Yes!'),
             MessageAction(label='No', text='No!'),
         ])
