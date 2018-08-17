@@ -105,7 +105,7 @@ def handle_text_message(event):
                 MessageAction(label='เมนูอาหาร', text='menu'),
                 URIAction(label='ติดต่อพนักงาน', uri='http://line.me/ti/p/~diode.pon'),
                 #URIAction(label='Contact', uri='https://scontent.fbkk10-1.fna.fbcdn.net/v/t1.0-9/25348376_10209405901979171_4715413657210557947_n.jpg?_nc_cat=0&oh=782afc517da25d80cf014aedf1a59b9b&oe=5C0DDB85'),
-                PostbackAction(label='ขอมูลร้าน', data='contact')
+                MessageAction(label='ขอมูลร้าน', text='contact')
             ])
         template_message = TemplateSendMessage(
             alt_text='Buttons alt text', template=buttons_template)
@@ -119,7 +119,7 @@ def handle_text_message(event):
         line_bot_api.reply_message(event.reply_token, Contact_image)
 
 
-    elif data == 'carousel':
+    elif text == 'carousel':
         carousel_template = CarouselTemplate(columns=[
             CarouselColumn(text='hoge1', title='fuga1', actions=[
                 URIAction(label='Go to line.me', uri='https://line.me'),
