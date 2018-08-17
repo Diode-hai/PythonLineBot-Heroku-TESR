@@ -96,7 +96,7 @@ def handle_text_message(event):
         if isinstance(event.source, SourceUser):
             profile = line_bot_api.get_profile(event.source.user_id)
         buttons_template = ButtonsTemplate(
-            title='สวัสดีค่ะ คุณ' + profile.display_name, text='ยินดีตอนรับเข้าสู่ร้านอาหารเวทมนต์ "TESR" คะ' + '\n' + 'ที่สามารถสั่งงานได้ที่ปุ่มเมนูด้านล่างนะค่ะ', actions=[
+            title='สวัสดีค่ะ คุณ' + profile.display_name, text='ยินดีตอนรับเข้าสู่ร้านอาหารเวทมนต์ TESR คะ' + '\n' + 'ที่สามารถสั่งงานได้ที่ปุ่มเมนูด้านล่างนะค่ะ', actions=[
                 #URIAction(label='Go to line.me', uri='https://line.me'),
                 #PostbackAction(label='ping', data='ping'),
                 #PostbackAction(label='ping with text', data='ping', text='ping'),
@@ -124,7 +124,7 @@ def handle_text_message(event):
         line_bot_api.reply_message(event.reply_token, template_message)
 #------------------------------------------------------------------------------------
     #elif text == 'image_carousel':
-    elif text == 'nenu':
+    elif text == 'menu':
         image_carousel_template = ImageCarouselTemplate(columns=[
             ImageCarouselColumn(image_url='https://scontent.fbkk10-1.fna.fbcdn.net/v/t1.0-9/39258923_1001266590056381_2474212427365875712_n.jpg?_nc_cat=0&oh=ae7f3674e018cfdb527ed3687540ba02&oe=5BF3F3C6',
                                 action=DatetimePickerAction(
