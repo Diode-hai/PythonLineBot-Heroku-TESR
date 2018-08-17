@@ -93,9 +93,9 @@ def handle_text_message(event):
             alt_text='Confirm alt text', template=confirm_template)
         #line_bot_api.reply_message(event.reply_token, template_message)
 		if text == 'Yes!':
-			line_bot_api.reply_message(event.reply_token, "ขอบคุณสำหรับเมนู ทางร้านจะแจ้งเวลารับอาหารอีกครั้ง")
+			line_bot_api.reply_message(event.reply_token, text='ขอบคุณสำหรับเมนู ทางร้านจะแจ้งเวลารับอาหารอีกครั้ง')
 		else:
-			line_bot_api.reply_message(event.reply_token, "สามารถเลือกเมนูใหม่นะ")
+			line_bot_api.reply_message(event.reply_token, text='สามารถเลือกเมนูใหม่นะ')
 	
 	elif text == '2':
         confirm_template = ConfirmTemplate(text= 'Chocolate frog' + '\n' + 'Are you sure about the menu?', actions=[
