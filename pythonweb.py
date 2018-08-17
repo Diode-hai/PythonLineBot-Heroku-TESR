@@ -85,7 +85,7 @@ def handle_text_message(event):
             
     #-------------------------------------------------------------------------        
     elif text == 'confirm':
-        confirm_template = ConfirmTemplate(text= event.message.text + 'Are you sure about the menu?', actions=[
+        confirm_template = ConfirmTemplate(text='Are you sure about the menu?', actions=[
             MessageAction(label='Yes', text='Yes!'),
             MessageAction(label='No', text='No!'),
         ])
