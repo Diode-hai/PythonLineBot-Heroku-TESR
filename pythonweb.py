@@ -83,12 +83,16 @@ def handle_text_message(event):
                 event.reply_token,
                 TextSendMessage(text="Bot can't leave from 1:1 chat"))
     elif text == '1':
-        confirm_template = ConfirmTemplate(text='Do it?', actions=[
+        confirm_template = ConfirmTemplate(text= 'Stone Cake' + '\n' + 'Are you sure about the menu?', actions=[
             MessageAction(label='Yes', text='Yes!'),
             MessageAction(label='No', text='No!'),
         ])
         template_message = TemplateSendMessage(
             alt_text='Confirm alt text', template=confirm_template)
+        if text == 'Yes!':
+            line_bot_api.reply_message(event.reply_token, text= 'ขอบคุณสำหรับการสั่งเมนูครั้งนี้ กรุณารอเรียกรับ')
+        else:
+            line_bot_api.reply_message(event.reply_token, text= 'ไม่เป็นไร เดี๋ยวเราให้เลือกเมใหม่อีกครั้งนะ')
         line_bot_api.reply_message(event.reply_token, template_message)
     elif text == 'buttons':
         buttons_template = ButtonsTemplate(
