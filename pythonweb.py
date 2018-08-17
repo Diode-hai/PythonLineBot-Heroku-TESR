@@ -96,13 +96,13 @@ def handle_text_message(event):
         if isinstance(event.source, SourceUser):
             profile = line_bot_api.get_profile(event.source.user_id)
         buttons_template = ButtonsTemplate(
-            title='สวัสดีค่ะ คุณ' + profile.display_name, text='ยินดีตอนรับเข้าสู่ร้านอาหารเวทมนต์ TESR ที่สามารถสั่งงานได้ที่ปุ่มเมนูด้านล่าง', actions=[
+            title='สวัสดีค่ะ คุณ' + profile.display_name, text='ยินดีตอนรับเข้าสู่ร้านอาหารเวทมนต์ "TESR" คะ' + '\n' + 'ที่สามารถสั่งงานได้ที่ปุ่มเมนูด้านล่างนะคะ', actions=[
                 #URIAction(label='Go to line.me', uri='https://line.me'),
                 #PostbackAction(label='ping', data='ping'),
                 #PostbackAction(label='ping with text', data='ping', text='ping'),
                 #MessageAction(label='Translate Rice', text='米')
                 MessageAction(label='Menu', text='menu'),
-                URIAction(label='Help', uri='https://line.me')
+                URIAction(label='Help', uri='deiode.pon')
             ])
         template_message = TemplateSendMessage(
             alt_text='Buttons alt text', template=buttons_template)
