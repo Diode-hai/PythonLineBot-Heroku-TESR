@@ -133,11 +133,11 @@ def handle_text_message(event):
             ImageCarouselColumn(image_url='https://via.placeholder.com/1024x1024',
                                 action=URIAction(
                                     label='Menu 1',uri='https://line.me'
-                                    ))
+                                    )),
             ImageCarouselColumn(image_url='https://via.placeholder.com/1024x1024',
                                 action=URIAction(
                                     label='Menu 2',uri='https://line.me'
-                                    ))
+                                    )),
             ImageCarouselColumn(image_url='https://via.placeholder.com/1024x1024',
                                 action=URIAction(
                                     label='Menu 3',uri='https://line.me'
