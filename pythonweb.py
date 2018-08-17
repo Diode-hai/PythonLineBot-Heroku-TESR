@@ -97,7 +97,7 @@ def handle_text_message(event):
             profile = line_bot_api.get_profile(event.source.user_id)
         buttons_template = ButtonsTemplate(
             thumbnail_image_url='https://scontent.fbkk1-5.fna.fbcdn.net/v/t1.0-9/39397734_1001769493339424_8256724874488184832_n.jpg?_nc_fx=fbkk1-6&_nc_cat=0&oh=769224df555c6ece24fed770cdffe287&oe=5C0BD1C5',
-            title='สวัสดีค่ะ คุณ' + profile.display_name, text='ยินดีตอนรับเข้าสู่ร้านอาหารเวทมนต์ "TESR" กรุณากดเลือกเมนูด้านล่างนะ', actions=[
+            title='สวัสดีค่ะ คุณ ' + profile.display_name, text='ยินดีตอนรับเข้าสู่ร้านอาหารเวทมนต์ "TESR" กรุณากดเลือกเมนูด้านล่างนะ', actions=[
                 #URIAction(label='Go to line.me', uri='https://line.me'),
                 #PostbackAction(label='ping', data='ping'),
                 #PostbackAction(label='ping with text', data='ping', text='ping'),
