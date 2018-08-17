@@ -27,7 +27,7 @@ app = Flask(__name__)
 line_bot_api = LineBotApi('yQh1VyVtqSvQck/1blc8QQ7sSxdIPNI9+CYB78XF9dUP0Ho2lGJ02rtnlaqe6aFlUeyVCszB6P6dy3GM5VgoY39OWbwmPCcljSOBcBbke6lc5ePxoaWp9pIRiC5M/hC2w/m25KnZ4MRvEOliFccGhAdB04t89/1O/w1cDnyilFU=')
 handler = WebhookHandler('2ba452b79e30fcf854be2b49785a7bd5')
 
-@app.route("/callback", methods=['POST'])
+@app.route("/callback_TESR", methods=['POST'])
 def callback():
     # get X-Line-Signature header value
     signature = request.headers['X-Line-Signature']
