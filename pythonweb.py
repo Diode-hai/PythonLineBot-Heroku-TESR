@@ -89,9 +89,10 @@ def handle_text_message(event):
         ])
         template_message = TemplateSendMessage(
             alt_text='Confirm alt text', template=confirm_template)
-        if template_message == 'Yes!':
+        line_bot_api.reply_message(event.reply_token, template_message)
+        if text == 'Yes!':
             line_bot_api.reply_message(event.reply_token, text= 'ขอบคุณสำหรับการสั่งเมนูครั้งนี้ กรุณารอเรียกรับ')
-        elif template_message == 'No!':
+        elif text == 'No!':
             line_bot_api.reply_message(event.reply_token, text= 'ไม่เป็นไร เดี๋ยวเราให้เลือกเมใหม่อีกครั้งนะ')
     elif text == 'buttons':
         buttons_template = ButtonsTemplate(
