@@ -107,7 +107,7 @@ def handle_text_message(event):
                 PostbackAction(label='ping', data='ping'),
                 #PostbackAction(label='ping with text', data='ping', text='ping'),
                 #MessageAction(label='Translate Rice', text='米')
-                MessageAction(label='เมนูอาหาร', text=''),
+                MessageAction(label='เมนูอาหาร', text='menu'),
                 URIAction(label='ติดต่อพนักงาน', uri='http://line.me/ti/p/~diode.pon'),
                 #URIAction(label='Contact', uri='https://scontent.fbkk10-1.fna.fbcdn.net/v/t1.0-9/25348376_10209405901979171_4715413657210557947_n.jpg?_nc_cat=0&oh=782afc517da25d80cf014aedf1a59b9b&oe=5C0DDB85'),
                 MessageAction(label='ขอมูลร้าน', text='contact')
