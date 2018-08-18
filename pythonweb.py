@@ -118,7 +118,7 @@ def handle_text_message(event):
             alt_text='Buttons alt text', template=buttons_template)
         line_bot_api.reply_message(event.reply_token, template_message)
 
-        if data =='ping':
+        if template_message.label =='ping':
             Contact_image = ImageSendMessage(
                 original_content_url='https://scontent.fbkk10-1.fna.fbcdn.net/v/t1.0-9/25348376_10209405901979171_4715413657210557947_n.jpg?_nc_cat=0&oh=782afc517da25d80cf014aedf1a59b9b&oe=5C0DDB85',
                 preview_image_url='https://scontent.fbkk10-1.fna.fbcdn.net/v/t1.0-9/25348376_10209405901979171_4715413657210557947_n.jpg?_nc_cat=0&oh=782afc517da25d80cf014aedf1a59b9b&oe=5C0DDB85'
