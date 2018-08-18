@@ -105,7 +105,7 @@ def handle_text_message(event):
             title='สวัสดีค่ะ คุณ ' + profile.display_name, text='ยินดีตอนรับเข้าสู่ร้านอาหารเวทมนต์ "TESR" กรุณากดเลือกเมนูด้านล่างนะ', actions=[
                 #URIAction(label='Go to line.me', uri='https://line.me'),
                 PostbackAction(label='ping', data='ping'),
-                #PostbackAction(label='ping with text', data='ping', text='ping'),
+                PostbackAction(label='ping with text', data='ping', text='ping'),
                 #MessageAction(label='Translate Rice', text='米')
                 MessageAction(label='เมนูอาหาร', text='menu'),
                 URIAction(label='ติดต่อพนักงาน', uri='http://line.me/ti/p/~diode.pon'),
