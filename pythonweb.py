@@ -71,9 +71,9 @@ def handle_text_message(event):
                 event.reply_token,
                 TextSendMessage(text="Bot can't use profile API without user ID"))
 #--------------------------------------------------------------------------------------
-    elif text == 'i':
-        line_bot_api = LineBotApi(line_bot_api)
-        line_bot_api.push_message('Ue0767b552bdffaa64add71ce93b016c5', TextSendMessage(text='Hello World!'))
+    #elif text == 'i':
+        #line_bot_api = LineBotApi(line_bot_api)
+        #line_bot_api.push_message('Ue0767b552bdffaa64add71ce93b016c5', TextSendMessage(text='Hello World!'))
  #---------------------------------------------------------------------------------               
     elif text == 'bye':
         if isinstance(event.source, SourceGroup):
