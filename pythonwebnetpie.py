@@ -76,7 +76,7 @@ def handle_text_message(event):
         if isinstance(event.source, SourceUser):
             profile = line_bot_api.get_profile(event.source.user_id)
             #REST API NETPIE ON LED
-            r = requests.put(url, data = {'':profile.user_id} , auth=(str(KEY),str(SECRET)))
+            r = requests.put(url, data = {'':profile} , auth=(str(KEY),str(SECRET)))
             line_bot_api.reply_message(
                 event.reply_token, [
                     TextSendMessage(text='Display name: ' + profile.display_name),
