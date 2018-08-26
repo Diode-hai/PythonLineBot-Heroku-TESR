@@ -82,7 +82,7 @@ def handle_text_message(event):
                     #TextSendMessage(text='Status message: ' + profile.status_message)
                 ]
             )
-            r = requests.put(url, data = {"":profile.user_id} , auth=(str(KEY),str(SECRET)))
+            r = requests.put(url, data = profile.user_id , auth=(str(KEY),str(SECRET)))
         else:
             line_bot_api.reply_message(
                 event.reply_token,
