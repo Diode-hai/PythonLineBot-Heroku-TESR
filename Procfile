@@ -1,1 +1,1 @@
-web: gunicorn pythonweb_inNetpie:app --log-file=-
+web: gunicorn pythonwebnetpie:app --log-file=-
