@@ -36,7 +36,7 @@ handler = WebhookHandler('85e93a3b16a648dafd2da84f1a9f9f3e')
 APPID="BotChatLine"
 KEY = "me37I8KsiCqpTWS"
 SECRET = "ozPtNGTK6GPA1STe1PjIvvrwS"
-Topic = "/LED_Control"
+Topic = "/LineChatbot"
 
 url = 'https://api.netpie.io/topic/' + str(APPID) + str(Topic)
 #curl -X PUT "https://api.netpie.io/topic/LineBotRpi/LED_Control" -d "ON" -u Jk0ej35pLC7TVr1:edWzwTUkzizhlyRamWWq6nF9I 
