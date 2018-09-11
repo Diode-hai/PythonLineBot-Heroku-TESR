@@ -202,10 +202,7 @@ def handle_text_message(event):
         template_message = TemplateSendMessage(
             alt_text='ImageCarousel alt text', template=image_carousel_template)
         line_bot_api.reply_message(event.reply_token, template_message)
-        #-----------------------------ID--Line------------------------------
-        r = requests.put(url, data = {profile.display_name:profile.user_id} , auth=(str(KEY),str(SECRET)))
-        #----------------------------------------------------------------------------
-
+       
 #------------------------------------------------------------------------------------
     elif text == 'imagemap':
         pass
