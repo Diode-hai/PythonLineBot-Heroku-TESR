@@ -38,7 +38,7 @@ KEY = "me37I8KsiCqpTWS"
 SECRET = "ozPtNGTK6GPA1STe1PjIvvrwS"
 Topic = "/LineChatbot"
 
-url = 'https://api.netpie.io/topic/' + str(APPID) + str(Topic) + "?retain"
+url = 'https://api.netpie.io/topic/' + str(APPID) + str(Topic) #+ "?retain"
 #curl -X PUT "https://api.netpie.io/topic/LineBotRpi/LED_Control" -d "ON" -u Jk0ej35pLC7TVr1:edWzwTUkzizhlyRamWWq6nF9I 
 
 urlRESTAPI = 'https://api.netpie.io/topic/' + str(APPID) + str(Topic) + '?auth=' + str(KEY) + ':' + str(SECRET)
