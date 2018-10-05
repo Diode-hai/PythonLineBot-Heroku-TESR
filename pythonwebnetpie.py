@@ -70,7 +70,7 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_text_message(event):
-    text = event.message.text
+    text = event.message.text.lower() #upper()
 #---------------------------------------------------------------------------------
 
 #---------------------------------------------------------------------------------
