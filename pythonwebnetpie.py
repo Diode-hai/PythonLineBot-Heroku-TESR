@@ -186,7 +186,7 @@ def handle_text_message(event):
         image_carousel_template = ImageCarouselTemplate(columns=[
             ImageCarouselColumn(image_url='https://scontent.fbkk10-1.fna.fbcdn.net/v/t1.0-9/39258923_1001266590056381_2474212427365875712_n.jpg?_nc_cat=0&oh=ae7f3674e018cfdb527ed3687540ba02&oe=5BF3F3C6',
                                 action=URIAction(
-                                    label='Menu All',uri='https://script.google.com/macros/s/AKfycbyT7NQmHg147rK49LsJDJfqgvCvF6vq1PKaWUE8ZHbBiJEm1p0/exec',r = requests.put(url, data = {profile.display_name: profile.user_id} , auth=(str(KEY),str(SECRET)))
+                                    label='Menu All',uri='https://script.google.com/macros/s/AKfycbyT7NQmHg147rK49LsJDJfqgvCvF6vq1PKaWUE8ZHbBiJEm1p0/exec'
                                     )),
             ImageCarouselColumn(image_url='https://scontent.fbkk1-3.fna.fbcdn.net/v/t1.0-9/39454660_1001737283342645_6691743344214671360_n.jpg?_nc_fx=fbkk1-6&_nc_cat=0&oh=269858a5a47d917d437695e5782b8e64&oe=5C0886A1',
                                 action=URIAction(
