@@ -181,7 +181,7 @@ def handle_text_message(event):
     elif text == 'menu':
                 
         profile = line_bot_api.get_profile(event.source.user_id)
-        #r = requests.put(url, data = {profile.display_name: profile.user_id} , auth=(str(KEY),str(SECRET)))
+        r = requests.put(url, data = {profile.display_name: profile.user_id} , auth=(str(KEY),str(SECRET)))
 
         image_carousel_template = ImageCarouselTemplate(columns=[
             ImageCarouselColumn(image_url='https://scontent.fbkk10-1.fna.fbcdn.net/v/t1.0-9/39258923_1001266590056381_2474212427365875712_n.jpg?_nc_cat=0&oh=ae7f3674e018cfdb527ed3687540ba02&oe=5BF3F3C6',
